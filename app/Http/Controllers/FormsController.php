@@ -70,10 +70,12 @@ class FormsController extends Controller
     public function store(Request $request){
         $form_name = $request->input('form_name');
         $form_description = $request->input('form_description');
+        $form_hash = sha1(microtime());
 
         DB::table('forms')->insert([
             'form_name' => $form_name,
             'form_description' => $form_description,
+            'form_hash' => $form_hash,
         ]);
 
         return redirect()->back()->with('message', 'Formular wurde erstellt.');
@@ -121,5 +123,15 @@ class FormsController extends Controller
         DB::table('forms')->where('id', '=', $fid)->delete();
 
         return redirect()->back()->with('message', 'Formular erfolgreich gelöscht.');
+    }
+
+    public function destroyEntry($eid){
+        $entry = DB::table('entries')->where('id', '=', $eid)->first();
+        DB::table('entries')->where('id', '=', $eid)->delete();
+        $form = DB::table('forms')->where('id', '=', $entry->FK_FORM)->first();
+
+        File::delete(storage_path("data/$form->form_hash/" . $entry->file_path  ));
+
+        return redirect()->back()->with('message', 'Eintrag erfolgreich gelöscht.');
     }
 }
