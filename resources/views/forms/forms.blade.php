@@ -45,6 +45,9 @@
                             Beschreibung
                         </th>
                         <th>
+                            Link
+                        </th>
+                        <th>
                             Optionen
                         </th>
                         </thead>
@@ -56,6 +59,9 @@
                                 </td>
                                 <td>
                                     {{ $form->form_name }}
+                                </td>
+                                <td>
+                                    <a href="{{ URL::to('/') . '/' . $form->form_hash }}">{{ URL::to('/') . '/' . $form->form_hash }}</a>
                                 </td>
                                 <td>
                                     <button onclick="location.href='{{ route('forms-show',$form->id) }}'" class="btn btn-danger ml-2"><span class="fa fa-eye"></span></button>

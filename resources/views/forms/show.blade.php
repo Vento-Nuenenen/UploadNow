@@ -16,7 +16,7 @@
                     </button>
                 </h5>
             </div>
-            <button onclick="location.href='{{ route('entries-download-all', $form->form_hash) }}'">Download all</button>
+            <button onclick="location.href='{{ route('entries-download-all', $form->form_hash) }}'" type="button" class="btn btn-primary form-control mt-2">Download all</button>
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent=".Groups">
                 <div class="card-body table-responsive">
                     <table class="table table-hover">
@@ -28,7 +28,7 @@
                             E-Mail
                         </th>
                         <th>
-                            Download
+                            Optionen
                         </th>
                         </thead>
                         <tbody>
@@ -42,6 +42,7 @@
                                 </td>
                                 <td>
                                     <button onclick="location.href='{{ route('entries-download',$entry->id) }}'" class="btn btn-danger ml-2"><span class="fa fa-download"></span></button>
+                                    <button onclick="location.href='{{ route('entries-delete',$entry->id) }}'" class="btn btn-danger ml-2"><span class="fa fa-trash"></span></button>
                                 </td>
                             </tr>
                         @endforeach
