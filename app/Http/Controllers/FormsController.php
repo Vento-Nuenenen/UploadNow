@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Response;
+use ZipArchive;
+use File;
 
 class FormsController extends Controller
 {
@@ -25,6 +27,21 @@ class FormsController extends Controller
         $entries = DB::table('entries')->where('FK_FORM', '=', $form->id)->get();
 
         return view('forms.show', ['form' => $form, 'entries' => $entries]);
+    }
+
+    public function downloadAll($hash){
+        $filename = $hash . '.zip';
+        $files = File::files(storage_path("data/$hash/"));
+
+        $zip = new ZipArchive();
+        $zip->open(storage_path("tmp/") . $filename, ZipArchive::CREATE | ZipArchive::OVERWRITE);
+
+        foreach ($files as $file) {
+            $zip->addFile($file, basename($file));
+        }
+        $zip->close();
+
+        return Response::download(storage_path("tmp/") . $filename);
     }
 
     public function download($eid){
