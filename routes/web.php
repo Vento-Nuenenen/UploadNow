@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function (){
 
     Route::get('/entries/download/{eid}', 'FormsController@download')->name('entries-download');
     Route::get('/entries/download/all/{hash}', 'FormsController@downloadAll')->name('entries-download-all');
+    Route::get('/entries/destroy/{eid}', 'FormsController@destroyEntry')->name('entries-delete');
 });
 
 Route::get('/', 'FrontendController@index')->name('front');
