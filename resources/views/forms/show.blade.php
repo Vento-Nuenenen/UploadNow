@@ -16,7 +16,7 @@
                     </button>
                 </h5>
             </div>
-            <button>Download all</button>
+            <button onclick="location.href='{{ route('entries-download-all', $form->form_hash) }}'">Download all</button>
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent=".Groups">
                 <div class="card-body table-responsive">
                     <table class="table table-hover">
