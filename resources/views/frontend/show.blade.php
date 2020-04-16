@@ -35,6 +35,7 @@
                             <input type="file" accept="audio/*,video/*" class="custom-file-input form-control" id="file" name="filename" aria-describedby="fileHelp" required />
                             <label class="custom-file-label" for="file">Choose file</label>
                         </div>
+                        <small id="nameHelp" class="form-text text-muted">Maximum file size is 100 Megabyte!</small>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Send</button>
