@@ -25,7 +25,7 @@ class FrontendController extends Controller
         $form = DB::table('forms')->where('form_hash', '=', $hash)->first();
 
         if(isset($form->form_hash) && $form->form_hash == $hash){
-            $name = $request->input('answerer_name');
+            $answerer_name = $request->input('answerer_name');
             $email = $request->input('email');
 
             if($request->file('filename')){
@@ -36,12 +36,12 @@ class FrontendController extends Controller
             }
 
             DB::table('entries')->insert([
-                'answerer_name' => $name,
+                'answerer_name' => $answerer_name,
                 'email' => $email,
                 'file_path' => $file_name,
                 'FK_FORM' => $form->id,
             ]);
-
+            
             return redirect("/$hash")->with('message', 'Your response was saved successfully!');
         }else{
             return redirect('/')->with('error', 'No form with this key found!');

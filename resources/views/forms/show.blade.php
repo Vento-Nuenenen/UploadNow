@@ -35,10 +35,10 @@
                         @foreach($entries as $entry)
                             <tr>
                                 <td>
-                                    {{ null !== $entry->answerer_name ?: 'No Answer' }}
+                                    {{ $entry->answerer_name ?: 'No Answer' }}
                                 </td>
                                 <td>
-                                    {{ null !== $entry->email ?: 'No Answer' }}
+                                    {{ $entry->email ?: 'No Answer' }}
                                 </td>
                                 <td>
                                     <button onclick="location.href='{{ route('entries-download',$entry->id) }}'" class="btn btn-danger ml-2"><span class="fa fa-download"></span></button>
