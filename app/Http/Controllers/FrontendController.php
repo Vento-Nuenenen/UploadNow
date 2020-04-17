@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Symfony\Component\Console\Input\Input;
+use Validator;
 
 class FrontendController extends Controller
 {
@@ -32,7 +34,15 @@ class FrontendController extends Controller
                 $file_name = time() .'.' . $request->file('filename')->extension();
                 $request->file('filename')->move(storage_path("data/$hash/"), $file_name);
             }else{
-                return redirect('/')->with('error', 'File is missing!');
+                return redirect()->back()->withInput()->with('error', 'File is missing!');
+            }
+
+            $validator = Validator::make(request()->all(), [
+                recaptchaFieldName() => recaptchaRuleName(),
+            ]);
+
+            if ($validator->fails()) {
+                return redirect()->back()->withInput()->with('error', 'Captcha validation failed!');
             }
 
             DB::table('entries')->insert([
@@ -41,7 +51,7 @@ class FrontendController extends Controller
                 'file_path' => $file_name,
                 'FK_FORM' => $form->id,
             ]);
-            
+
             return redirect("/$hash")->with('message', 'Your response was saved successfully!');
         }else{
             return redirect('/')->with('error', 'No form with this key found!');
