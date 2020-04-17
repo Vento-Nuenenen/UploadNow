@@ -12,7 +12,7 @@
             <div class="card-body">
                 <h1 class="card-title">{{ $form->form_name }}</h1>
                 <p class="card-text">
-                    {{ $form->form_description }}
+                    {!! Helper::nl2br($form->form_description) !!}
                 </p>
                 <hr />
                 <br />
@@ -37,6 +37,10 @@
                         </div>
                         <small id="nameHelp" class="form-text text-muted">Maximum file size is 100 Megabyte!</small>
                     </div>
+
+                    {!! ReCaptcha::htmlFormSnippet() !!}
+
+                    <br />
 
                     <button type="submit" class="btn btn-primary">Send</button>
                 </form>
