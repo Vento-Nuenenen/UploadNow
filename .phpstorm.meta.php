@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2020-04-17 17:24:43.
+    * Generated on 2020-04-17 18:32:08.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -154,6 +154,7 @@ namespace PHPSTORM_META {
         'queue.failer' => \Illuminate\Queue\Failed\DatabaseFailedJobProvider::class,
         'queue.listener' => \Illuminate\Queue\Listener::class,
         'queue.worker' => \Illuminate\Queue\Worker::class,
+        'recaptcha' => \Biscolab\ReCaptcha\ReCaptchaBuilderV2::class,
         'redirect' => \Illuminate\Routing\Redirector::class,
         'redis' => \Illuminate\Redis\RedisManager::class,
         'router' => \Illuminate\Routing\Router::class,
@@ -311,6 +312,7 @@ namespace PHPSTORM_META {
         'queue.failer' => \Illuminate\Queue\Failed\DatabaseFailedJobProvider::class,
         'queue.listener' => \Illuminate\Queue\Listener::class,
         'queue.worker' => \Illuminate\Queue\Worker::class,
+        'recaptcha' => \Biscolab\ReCaptcha\ReCaptchaBuilderV2::class,
         'redirect' => \Illuminate\Routing\Redirector::class,
         'redis' => \Illuminate\Redis\RedisManager::class,
         'router' => \Illuminate\Routing\Router::class,
@@ -468,6 +470,7 @@ namespace PHPSTORM_META {
         'queue.failer' => \Illuminate\Queue\Failed\DatabaseFailedJobProvider::class,
         'queue.listener' => \Illuminate\Queue\Listener::class,
         'queue.worker' => \Illuminate\Queue\Worker::class,
+        'recaptcha' => \Biscolab\ReCaptcha\ReCaptchaBuilderV2::class,
         'redirect' => \Illuminate\Routing\Redirector::class,
         'redis' => \Illuminate\Redis\RedisManager::class,
         'router' => \Illuminate\Routing\Router::class,
@@ -625,6 +628,7 @@ namespace PHPSTORM_META {
         'queue.failer' => \Illuminate\Queue\Failed\DatabaseFailedJobProvider::class,
         'queue.listener' => \Illuminate\Queue\Listener::class,
         'queue.worker' => \Illuminate\Queue\Worker::class,
+        'recaptcha' => \Biscolab\ReCaptcha\ReCaptchaBuilderV2::class,
         'redirect' => \Illuminate\Routing\Redirector::class,
         'redis' => \Illuminate\Redis\RedisManager::class,
         'router' => \Illuminate\Routing\Router::class,
@@ -782,6 +786,7 @@ namespace PHPSTORM_META {
         'queue.failer' => \Illuminate\Queue\Failed\DatabaseFailedJobProvider::class,
         'queue.listener' => \Illuminate\Queue\Listener::class,
         'queue.worker' => \Illuminate\Queue\Worker::class,
+        'recaptcha' => \Biscolab\ReCaptcha\ReCaptchaBuilderV2::class,
         'redirect' => \Illuminate\Routing\Redirector::class,
         'redis' => \Illuminate\Redis\RedisManager::class,
         'router' => \Illuminate\Routing\Router::class,
@@ -939,6 +944,7 @@ namespace PHPSTORM_META {
         'queue.failer' => \Illuminate\Queue\Failed\DatabaseFailedJobProvider::class,
         'queue.listener' => \Illuminate\Queue\Listener::class,
         'queue.worker' => \Illuminate\Queue\Worker::class,
+        'recaptcha' => \Biscolab\ReCaptcha\ReCaptchaBuilderV2::class,
         'redirect' => \Illuminate\Routing\Redirector::class,
         'redis' => \Illuminate\Redis\RedisManager::class,
         'router' => \Illuminate\Routing\Router::class,
@@ -1096,6 +1102,7 @@ namespace PHPSTORM_META {
         'queue.failer' => \Illuminate\Queue\Failed\DatabaseFailedJobProvider::class,
         'queue.listener' => \Illuminate\Queue\Listener::class,
         'queue.worker' => \Illuminate\Queue\Worker::class,
+        'recaptcha' => \Biscolab\ReCaptcha\ReCaptchaBuilderV2::class,
         'redirect' => \Illuminate\Routing\Redirector::class,
         'redis' => \Illuminate\Redis\RedisManager::class,
         'router' => \Illuminate\Routing\Router::class,
@@ -1253,6 +1260,7 @@ namespace PHPSTORM_META {
         'queue.failer' => \Illuminate\Queue\Failed\DatabaseFailedJobProvider::class,
         'queue.listener' => \Illuminate\Queue\Listener::class,
         'queue.worker' => \Illuminate\Queue\Worker::class,
+        'recaptcha' => \Biscolab\ReCaptcha\ReCaptchaBuilderV2::class,
         'redirect' => \Illuminate\Routing\Redirector::class,
         'redis' => \Illuminate\Redis\RedisManager::class,
         'router' => \Illuminate\Routing\Router::class,
