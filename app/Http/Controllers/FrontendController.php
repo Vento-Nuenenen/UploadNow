@@ -25,8 +25,9 @@ class FrontendController extends Controller
         $form = DB::table('forms')->where('form_hash', '=', $hash)->first();
 
         if(isset($form->form_hash) && $form->form_hash == $hash){
-            $name = null !== $request->input('answerer_name') ?: null;
-            $email = null !== $request->input('email') ?: null;
+            $name = $request->input('answerer_name');
+            $email = $request->input('email');
+
             if($request->file('filename')){
                 $file_name = time() .'.' . $request->file('filename')->extension();
                 $request->file('filename')->move(storage_path("data/$hash/"), $file_name);

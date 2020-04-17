@@ -20,17 +20,17 @@
                     @csrf
 
                     <div class="form-group">
-                        <label for="answerer_name">Vor & Nachname / nom et prénom / first & last name  (Optional)</label>
+                        <label for="answerer_name">Vor & Nachname / nom et prénom / first & last name (Optional)</label>
                         <input type="text" class="form-control" id="answerer_name" name="answerer_name" aria-describedby="nameHelp" />
                     </div>
 
                     <div class="form-group">
-                        <label for="email">E-Mail / Courrier électronique / e-mail  (Optional)</label>
+                        <label for="email">E-Mail / Courrier électronique / e-mail (Optional)</label>
                         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" />
                     </div>
 
                     <div class="form-group">
-                        <label for="file">Datei / fichier / file  (required)</label>
+                        <label for="file">Datei / fichier / file (required)</label>
                         <div class="custom-file mb-3">
                             <input type="file" accept="audio/*,video/*" class="custom-file-input form-control" id="file" name="filename" aria-describedby="fileHelp" required />
                             <label class="custom-file-label" for="file">Choose file</label>
