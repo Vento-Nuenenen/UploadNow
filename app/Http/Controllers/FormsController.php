@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Helper\Helper;
 use Illuminate\Http\Request;
 use DB;
 use Response;
@@ -72,7 +71,7 @@ class FormsController extends Controller
         $form_name = $request->input('form_name');
         $form_description = $request->input('form_description');
         $form_hash = sha1(microtime());
-        
+
         DB::table('forms')->insert([
             'form_name' => $form_name,
             'form_description' => $form_description,
