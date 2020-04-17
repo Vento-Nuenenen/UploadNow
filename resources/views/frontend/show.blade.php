@@ -23,7 +23,7 @@
                 </p>
                 <hr />
                 <br />
-                <form id="{{ ReCaptcha::getFormId() }}" method="post" action="{{ $form->form_hash }}/send" enctype="multipart/form-data">
+                <form method="post" action="{{ $form->form_hash }}/send" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group">
@@ -48,7 +48,8 @@
                     <br />
 
                     <div>
-                        {!! htmlFormButton("Send", ['type' => 'submit', 'class' => 'btn btn-primary']) !!}
+                        @captcha
+                        <button type="submit" class="btn btn-primary">Send</button>
                     </div>
                 </form>
             </div>

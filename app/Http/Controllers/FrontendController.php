@@ -38,7 +38,7 @@ class FrontendController extends Controller
             }
 
             $validator = Validator::make(request()->all(), [
-                recaptchaFieldName() => recaptchaRuleName(),
+                'g-recaptcha-response' => 'required|captcha',
             ]);
 
             if ($validator->fails()) {
