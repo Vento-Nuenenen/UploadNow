@@ -36,6 +36,11 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
+        if ($this->shouldReport($exception)) {
+            $airbrakeNotifier = \App::make('Airbrake\Notifier');
+            $airbrakeNotifier->notify($exception);
+        }
+
         parent::report($exception);
     }
 

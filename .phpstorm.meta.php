@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2020-04-17 22:19:25.
+    * Generated on 2020-04-18 18:05:15.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -48,6 +48,7 @@ namespace PHPSTORM_META {
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
+        'captcha' => \AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha::class,
         'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
@@ -205,6 +206,7 @@ namespace PHPSTORM_META {
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
+        'captcha' => \AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha::class,
         'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
@@ -362,6 +364,7 @@ namespace PHPSTORM_META {
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
+        'captcha' => \AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha::class,
         'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
@@ -519,6 +522,7 @@ namespace PHPSTORM_META {
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
+        'captcha' => \AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha::class,
         'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
@@ -676,6 +680,7 @@ namespace PHPSTORM_META {
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
+        'captcha' => \AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha::class,
         'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
@@ -833,6 +838,7 @@ namespace PHPSTORM_META {
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
+        'captcha' => \AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha::class,
         'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
@@ -990,6 +996,7 @@ namespace PHPSTORM_META {
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
+        'captcha' => \AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha::class,
         'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
@@ -1147,6 +1154,7 @@ namespace PHPSTORM_META {
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
         'cache.store' => \Illuminate\Cache\Repository::class,
+        'captcha' => \AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha::class,
         'command.auth.resets.clear' => \Illuminate\Auth\Console\ClearResetsCommand::class,
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,

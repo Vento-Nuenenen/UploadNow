@@ -4,8 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e00d41e8da2defa4548811ff35f3149a",
+    "content-hash": "2b2dc8014c76842dbbc41f7e2042cfa6",
     "packages": [
+        {
+            "name": "airbrake/phpbrake",
+            "version": "v0.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/airbrake/phpbrake.git",
+                "reference": "d34f171897941157aeb1949f9d8b69dca003479b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/airbrake/phpbrake/zipball/d34f171897941157aeb1949f9d8b69dca003479b",
+                "reference": "d34f171897941157aeb1949f9d8b69dca003479b",
+                "shasum": ""
+            },
+            "require": {
+                "cash/lrucache": "^1.0",
+                "guzzlehttp/guzzle": "^6.3",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "monolog/monolog": "^1.22|^2.0",
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^2.9"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "Guzzle HTTP client"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Airbrake\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Airbrake exception and error notifier for PHP",
+            "homepage": "https://airbrake.io",
+            "keywords": [
+                "airbrake",
+                "error",
+                "exception",
+                "logging",
+                "notifier"
+            ],
+            "time": "2020-03-24T14:50:19+00:00"
+        },
         {
             "name": "albertcht/invisible-recaptcha",
             "version": "v1.9.4",
@@ -162,6 +215,47 @@
                 "math"
             ],
             "time": "2020-04-15T15:59:35+00:00"
+        },
+        {
+            "name": "cash/lrucache",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cash/LRUCache.git",
+                "reference": "4fa4c6834cec59690b43526c4da41d6153026289"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cash/LRUCache/zipball/4fa4c6834cec59690b43526c4da41d6153026289",
+                "reference": "4fa4c6834cec59690b43526c4da41d6153026289",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "cash": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cash Costello",
+                    "email": "cash.costello@gmail.com"
+                }
+            ],
+            "description": "An efficient memory-based Least Recently Used (LRU) cache",
+            "homepage": "https://github.com/cash/LRUCache",
+            "keywords": [
+                "cache",
+                "lru"
+            ],
+            "time": "2013-09-20T18:59:12+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -561,23 +655,24 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.2",
+            "version": "6.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82"
+                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/43ece0e75098b7ecd8d13918293029e555a50f82",
-                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/aab4ebd862aa7d04f01a4b51849d657db56d882e",
+                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.6.1",
-                "php": ">=5.5"
+                "php": ">=5.5",
+                "symfony/polyfill-intl-idn": "^1.11"
             },
             "require-dev": {
                 "ext-curl": "*",
@@ -585,7 +680,6 @@
                 "psr/log": "^1.1"
             },
             "suggest": {
-                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
@@ -624,7 +718,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-12-23T11:57:10+00:00"
+            "time": "2020-04-18T10:38:46+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -747,6 +841,55 @@
                 "url"
             ],
             "time": "2019-07-01T23:21:34+00:00"
+        },
+        {
+            "name": "kouz/laravel-airbrake",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TheoKouzelis/laravel-airbrake.git",
+                "reference": "da1e9470efd43ccdb82c025143d7ffd9662bfd28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TheoKouzelis/laravel-airbrake/zipball/da1e9470efd43ccdb82c025143d7ffd9662bfd28",
+                "reference": "da1e9470efd43ccdb82c025143d7ffd9662bfd28",
+                "shasum": ""
+            },
+            "require": {
+                "airbrake/phpbrake": "^0.7.3",
+                "illuminate/support": "^5.0|^6.0|^7.0",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kouz\\LaravelAirbrake\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kouz\\LaravelAirbrake\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Theo Kouzelis",
+                    "email": "tkouzelis@outlook.com"
+                }
+            ],
+            "description": "Laravel service provider for Airbrake https://github.com/airbrake/phpbrake",
+            "keywords": [
+                "airbrake",
+                "laravel"
+            ],
+            "time": "2020-04-09T08:01:49+00:00"
         },
         {
             "name": "laravel/framework",
@@ -6806,16 +6949,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
             "require": {
@@ -6823,7 +6966,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "vimeo/psalm": "<3.6.0"
+                "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
@@ -6850,7 +6993,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-02-14T12:15:55+00:00"
+            "time": "2020-04-18T12:12:48+00:00"
         }
     ],
     "aliases": [],
