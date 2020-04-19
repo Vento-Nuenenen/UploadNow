@@ -8,7 +8,7 @@ $(".custom-file-input").on("change", function() {
 var uploadField = document.getElementById("file");
 
 uploadField.onchange = function() {
-    if(this.files[0].size > 307200){
+    if(this.files[0].size > 216006656){
         alert("File is too big! Max file size is 200 Megabyte!");
         $(".custom-file-label").removeClass("selected").html("Choose file");
     };
