@@ -5,13 +5,14 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2020-04-18 18:05:15.
+    * Generated on 2020-05-06 19:15:28.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
     */
     override(new \Illuminate\Contracts\Container\Container, map([
         '' => '@',
+        'Airbrake\Notifier' => \Airbrake\Notifier::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -53,6 +54,7 @@ namespace PHPSTORM_META {
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
         'command.cache.table' => \Illuminate\Cache\Console\CacheTableCommand::class,
+        'command.cast.make' => \Illuminate\Foundation\Console\CastMakeCommand::class,
         'command.channel.make' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
         'command.clear-compiled' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
         'command.component.make' => \Illuminate\Foundation\Console\ComponentMakeCommand::class,
@@ -170,6 +172,7 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Container\Container::makeWith(0), map([
         '' => '@',
+        'Airbrake\Notifier' => \Airbrake\Notifier::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -211,6 +214,7 @@ namespace PHPSTORM_META {
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
         'command.cache.table' => \Illuminate\Cache\Console\CacheTableCommand::class,
+        'command.cast.make' => \Illuminate\Foundation\Console\CastMakeCommand::class,
         'command.channel.make' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
         'command.clear-compiled' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
         'command.component.make' => \Illuminate\Foundation\Console\ComponentMakeCommand::class,
@@ -328,6 +332,7 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
+        'Airbrake\Notifier' => \Airbrake\Notifier::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -369,6 +374,7 @@ namespace PHPSTORM_META {
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
         'command.cache.table' => \Illuminate\Cache\Console\CacheTableCommand::class,
+        'command.cast.make' => \Illuminate\Foundation\Console\CastMakeCommand::class,
         'command.channel.make' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
         'command.clear-compiled' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
         'command.component.make' => \Illuminate\Foundation\Console\ComponentMakeCommand::class,
@@ -486,6 +492,7 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
+        'Airbrake\Notifier' => \Airbrake\Notifier::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -527,6 +534,7 @@ namespace PHPSTORM_META {
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
         'command.cache.table' => \Illuminate\Cache\Console\CacheTableCommand::class,
+        'command.cast.make' => \Illuminate\Foundation\Console\CastMakeCommand::class,
         'command.channel.make' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
         'command.clear-compiled' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
         'command.component.make' => \Illuminate\Foundation\Console\ComponentMakeCommand::class,
@@ -644,6 +652,7 @@ namespace PHPSTORM_META {
     ]));
     override(\App::make(0), map([
         '' => '@',
+        'Airbrake\Notifier' => \Airbrake\Notifier::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -685,6 +694,7 @@ namespace PHPSTORM_META {
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
         'command.cache.table' => \Illuminate\Cache\Console\CacheTableCommand::class,
+        'command.cast.make' => \Illuminate\Foundation\Console\CastMakeCommand::class,
         'command.channel.make' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
         'command.clear-compiled' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
         'command.component.make' => \Illuminate\Foundation\Console\ComponentMakeCommand::class,
@@ -802,6 +812,7 @@ namespace PHPSTORM_META {
     ]));
     override(\App::makeWith(0), map([
         '' => '@',
+        'Airbrake\Notifier' => \Airbrake\Notifier::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -843,6 +854,7 @@ namespace PHPSTORM_META {
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
         'command.cache.table' => \Illuminate\Cache\Console\CacheTableCommand::class,
+        'command.cast.make' => \Illuminate\Foundation\Console\CastMakeCommand::class,
         'command.channel.make' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
         'command.clear-compiled' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
         'command.component.make' => \Illuminate\Foundation\Console\ComponentMakeCommand::class,
@@ -960,6 +972,7 @@ namespace PHPSTORM_META {
     ]));
     override(\app(0), map([
         '' => '@',
+        'Airbrake\Notifier' => \Airbrake\Notifier::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -1001,6 +1014,7 @@ namespace PHPSTORM_META {
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
         'command.cache.table' => \Illuminate\Cache\Console\CacheTableCommand::class,
+        'command.cast.make' => \Illuminate\Foundation\Console\CastMakeCommand::class,
         'command.channel.make' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
         'command.clear-compiled' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
         'command.component.make' => \Illuminate\Foundation\Console\ComponentMakeCommand::class,
@@ -1118,6 +1132,7 @@ namespace PHPSTORM_META {
     ]));
     override(\resolve(0), map([
         '' => '@',
+        'Airbrake\Notifier' => \Airbrake\Notifier::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'Facade\IgnitionContracts\SolutionProviderRepository' => \Facade\Ignition\SolutionProviders\SolutionProviderRepository::class,
@@ -1159,6 +1174,7 @@ namespace PHPSTORM_META {
         'command.cache.clear' => \Illuminate\Cache\Console\ClearCommand::class,
         'command.cache.forget' => \Illuminate\Cache\Console\ForgetCommand::class,
         'command.cache.table' => \Illuminate\Cache\Console\CacheTableCommand::class,
+        'command.cast.make' => \Illuminate\Foundation\Console\CastMakeCommand::class,
         'command.channel.make' => \Illuminate\Foundation\Console\ChannelMakeCommand::class,
         'command.clear-compiled' => \Illuminate\Foundation\Console\ClearCompiledCommand::class,
         'command.component.make' => \Illuminate\Foundation\Console\ComponentMakeCommand::class,
