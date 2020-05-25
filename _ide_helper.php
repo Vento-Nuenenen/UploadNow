@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 7.11.0 on 2020-05-13 15:46:17.
+ * Generated for Laravel 7.12.0 on 2020-05-25 19:38:33.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -6545,33 +6545,33 @@ namespace Illuminate\Support\Facades {
     /**
      * 
      *
-     * @method static \Illuminate\Http\Client\PendingRequest asJson()
+     * @method static \Illuminate\Http\Client\PendingRequest accept(string $contentType)
+     * @method static \Illuminate\Http\Client\PendingRequest acceptJson()
      * @method static \Illuminate\Http\Client\PendingRequest asForm()
-     * @method static \Illuminate\Http\Client\PendingRequest attach(string $name, string $contents, string|null $filename = null, array $headers = [])
+     * @method static \Illuminate\Http\Client\PendingRequest asJson()
      * @method static \Illuminate\Http\Client\PendingRequest asMultipart()
+     * @method static \Illuminate\Http\Client\PendingRequest attach(string $name, string $contents, string|null $filename = null, array $headers = [])
+     * @method static \Illuminate\Http\Client\PendingRequest beforeSending(callable $callback)
      * @method static \Illuminate\Http\Client\PendingRequest bodyFormat(string $format)
      * @method static \Illuminate\Http\Client\PendingRequest contentType(string $contentType)
-     * @method static \Illuminate\Http\Client\PendingRequest acceptJson()
-     * @method static \Illuminate\Http\Client\PendingRequest accept(string $contentType)
      * @method static \Illuminate\Http\Client\PendingRequest retry(int $times, int $sleep = 0)
-     * @method static \Illuminate\Http\Client\PendingRequest withHeaders(array $headers)
+     * @method static \Illuminate\Http\Client\PendingRequest stub(callable $callback)
+     * @method static \Illuminate\Http\Client\PendingRequest timeout(int $seconds)
      * @method static \Illuminate\Http\Client\PendingRequest withBasicAuth(string $username, string $password)
-     * @method static \Illuminate\Http\Client\PendingRequest withDigestAuth(string $username, string $password)
-     * @method static \Illuminate\Http\Client\PendingRequest withToken(string $token, string $type = 'Bearer')
      * @method static \Illuminate\Http\Client\PendingRequest withCookies(array $cookies, string $domain)
+     * @method static \Illuminate\Http\Client\PendingRequest withDigestAuth(string $username, string $password)
+     * @method static \Illuminate\Http\Client\PendingRequest withHeaders(array $headers)
+     * @method static \Illuminate\Http\Client\PendingRequest withOptions(array $options)
+     * @method static \Illuminate\Http\Client\PendingRequest withToken(string $token, string $type = 'Bearer')
      * @method static \Illuminate\Http\Client\PendingRequest withoutRedirecting()
      * @method static \Illuminate\Http\Client\PendingRequest withoutVerifying()
-     * @method static \Illuminate\Http\Client\PendingRequest timeout(int $seconds)
-     * @method static \Illuminate\Http\Client\PendingRequest withOptions(array $options)
-     * @method static \Illuminate\Http\Client\PendingRequest beforeSending(callable $callback)
+     * @method static \Illuminate\Http\Client\Response delete(string $url, array $data = [])
      * @method static \Illuminate\Http\Client\Response get(string $url, array $query = [])
      * @method static \Illuminate\Http\Client\Response head(string $url, array $query = [])
-     * @method static \Illuminate\Http\Client\Response post(string $url, array $data = [])
      * @method static \Illuminate\Http\Client\Response patch(string $url, array $data = [])
+     * @method static \Illuminate\Http\Client\Response post(string $url, array $data = [])
      * @method static \Illuminate\Http\Client\Response put(string $url, array $data = [])
-     * @method static \Illuminate\Http\Client\Response delete(string $url, array $data = [])
      * @method static \Illuminate\Http\Client\Response send(string $method, string $url, array $options = [])
-     * @method static \Illuminate\Http\Client\PendingRequest stub(callable $callback)
      * @see \Illuminate\Http\Client\Factory
      */ 
     class Http {
@@ -7952,8 +7952,8 @@ namespace Illuminate\Support\Facades {
     /**
      * 
      *
-     * @method static string sendResetLink(array $credentials)
      * @method static mixed reset(array $credentials, \Closure $callback)
+     * @method static string sendResetLink(array $credentials)
      * @see \Illuminate\Auth\Passwords\PasswordBroker
      */ 
     class Password {
@@ -11192,13 +11192,13 @@ namespace Illuminate\Support\Facades {
     /**
      * 
      *
-     * @method static \Illuminate\Routing\RouteRegistrar prefix(string  $prefix)
-     * @method static \Illuminate\Routing\RouteRegistrar where(array  $where)
-     * @method static \Illuminate\Routing\RouteRegistrar middleware(array|string|null $middleware)
      * @method static \Illuminate\Routing\RouteRegistrar as(string $value)
      * @method static \Illuminate\Routing\RouteRegistrar domain(string $value)
+     * @method static \Illuminate\Routing\RouteRegistrar middleware(array|string|null $middleware)
      * @method static \Illuminate\Routing\RouteRegistrar name(string $value)
      * @method static \Illuminate\Routing\RouteRegistrar namespace(string $value)
+     * @method static \Illuminate\Routing\RouteRegistrar prefix(string  $prefix)
+     * @method static \Illuminate\Routing\RouteRegistrar where(array  $where)
      * @see \Illuminate\Routing\Router
      */ 
     class Route {
@@ -17065,13 +17065,14 @@ namespace Collective\Html {
          * @param string $url
          * @param string $title
          * @param array $attributes
+         * @param bool $escape
          * @return \Illuminate\Support\HtmlString 
          * @static 
          */ 
-        public static function secureLink($url, $title = null, $attributes = [])
+        public static function secureLink($url, $title = null, $attributes = [], $escape = true)
         {
                         /** @var \Collective\Html\HtmlBuilder $instance */
-                        return $instance->secureLink($url, $title, $attributes);
+                        return $instance->secureLink($url, $title, $attributes, $escape);
         }
         
         /**
@@ -17081,13 +17082,14 @@ namespace Collective\Html {
          * @param string $title
          * @param array $attributes
          * @param bool $secure
+         * @param bool $escape
          * @return \Illuminate\Support\HtmlString 
          * @static 
          */ 
-        public static function linkAsset($url, $title = null, $attributes = [], $secure = null)
+        public static function linkAsset($url, $title = null, $attributes = [], $secure = null, $escape = true)
         {
                         /** @var \Collective\Html\HtmlBuilder $instance */
-                        return $instance->linkAsset($url, $title, $attributes, $secure);
+                        return $instance->linkAsset($url, $title, $attributes, $secure, $escape);
         }
         
         /**
@@ -17096,13 +17098,14 @@ namespace Collective\Html {
          * @param string $url
          * @param string $title
          * @param array $attributes
+         * @param bool $escape
          * @return \Illuminate\Support\HtmlString 
          * @static 
          */ 
-        public static function linkSecureAsset($url, $title = null, $attributes = [])
+        public static function linkSecureAsset($url, $title = null, $attributes = [], $escape = true)
         {
                         /** @var \Collective\Html\HtmlBuilder $instance */
-                        return $instance->linkSecureAsset($url, $title, $attributes);
+                        return $instance->linkSecureAsset($url, $title, $attributes, $escape);
         }
         
         /**
@@ -17112,13 +17115,15 @@ namespace Collective\Html {
          * @param string $title
          * @param array $parameters
          * @param array $attributes
+         * @param bool $secure
+         * @param bool $escape
          * @return \Illuminate\Support\HtmlString 
          * @static 
          */ 
-        public static function linkRoute($name, $title = null, $parameters = [], $attributes = [])
+        public static function linkRoute($name, $title = null, $parameters = [], $attributes = [], $secure = null, $escape = true)
         {
                         /** @var \Collective\Html\HtmlBuilder $instance */
-                        return $instance->linkRoute($name, $title, $parameters, $attributes);
+                        return $instance->linkRoute($name, $title, $parameters, $attributes, $secure, $escape);
         }
         
         /**
@@ -17128,13 +17133,15 @@ namespace Collective\Html {
          * @param string $title
          * @param array $parameters
          * @param array $attributes
+         * @param bool $secure
+         * @param bool $escape
          * @return \Illuminate\Support\HtmlString 
          * @static 
          */ 
-        public static function linkAction($action, $title = null, $parameters = [], $attributes = [])
+        public static function linkAction($action, $title = null, $parameters = [], $attributes = [], $secure = null, $escape = true)
         {
                         /** @var \Collective\Html\HtmlBuilder $instance */
-                        return $instance->linkAction($action, $title, $parameters, $attributes);
+                        return $instance->linkAction($action, $title, $parameters, $attributes, $secure, $escape);
         }
         
         /**
