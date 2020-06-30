@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use DB;
-use File;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
-use Response;
+use Illuminate\Support\Facades\Response;
 use ZipArchive;
 
 class FormsController extends Controller

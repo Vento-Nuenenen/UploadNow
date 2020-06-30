@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Symfony\Component\Console\Input\Input;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 
 class FrontendController extends Controller
 {
