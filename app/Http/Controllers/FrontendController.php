@@ -21,7 +21,7 @@ class FrontendController extends Controller
         if (isset($form->form_hash) && $form->form_hash == $hash) {
             return view('frontend.show', ['form' => $form]);
         } else {
-            return redirect('/')->with('error', 'No form with this key found!');
+            return redirect()->to('/')->with('error', 'No form with this key found!');
         }
     }
 
@@ -57,7 +57,7 @@ class FrontendController extends Controller
 
             return redirect("/$hash")->with('message', 'Your response was saved successfully!');
         } else {
-            return redirect('/')->with('error', 'No form with this key found!');
+            return redirect()->to('/')->with('error', 'No form with this key found!');
         }
     }
 }
