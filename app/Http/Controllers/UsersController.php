@@ -8,7 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class UsersController  extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,6 +31,7 @@ class UsersController  extends Controller
 
         return view('users.users', ['users' => $users]);
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -40,6 +41,7 @@ class UsersController  extends Controller
     {
         return view('users.add');
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -67,7 +69,7 @@ class UsersController  extends Controller
                 'first_name' => $firstname,
                 'last_name' => $lastname,
                 'email' => $email,
-                'password' => $password
+                'password' => $password,
             ]);
 
             return redirect()->back()->with('message', 'Benutzer wurde erstellt.');
@@ -75,6 +77,7 @@ class UsersController  extends Controller
             return redirect()->back()->with('error', 'Passwort wurde nicht korrekt wiederholt!');
         }
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -88,6 +91,7 @@ class UsersController  extends Controller
 
         return view('users.edit', ['users' => $users]);
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -116,7 +120,7 @@ class UsersController  extends Controller
                 'first_name' => $firstname,
                 'last_name' => $lastname,
                 'email' => $email,
-                'password' => $password
+                'password' => $password,
             ]);
 
             return redirect()->back()->with('message', 'Benutzer wurde aktualisiert.');
@@ -125,7 +129,7 @@ class UsersController  extends Controller
                 'scout_name' => $scoutname,
                 'first_name' => $firstname,
                 'last_name' => $lastname,
-                'email' => $email
+                'email' => $email,
             ]);
 
             return redirect()->back()->with('message', 'Benutzer wurde aktualisiert. Das Passwort wurde beibehalten!');
@@ -133,6 +137,7 @@ class UsersController  extends Controller
             return redirect()->back()->with('error', 'Passwort wurde nicht korrekt wiederholt!');
         }
     }
+
     /**
      * Remove the specified resource from storage.
      *

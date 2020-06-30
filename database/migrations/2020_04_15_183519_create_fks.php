@@ -13,12 +13,12 @@ class CreateFks extends Migration
      */
     public function up()
     {
-        Schema::table('forms_users', function(Blueprint $table){
+        Schema::table('forms_users', function (Blueprint $table) {
             $table->foreign('FK_USR')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('FK_FORM')->references('id')->on('forms')->onDelete('cascade');
         });
 
-        Schema::table('entries', function(Blueprint $table){
+        Schema::table('entries', function (Blueprint $table) {
             $table->foreign('FK_FORM')->references('id')->on('forms')->onDelete('cascade');
         });
     }

@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder
         // Seed test admin
         $seededAdminEmail = 'admin@uploadnow.ch';
         $user = User::where('email', '=', $seededAdminEmail)->first();
-        if ($user === null){
+        if ($user === null) {
             $user = User::create([
                 'scoutname' => 'Admin',
                 'firstname' => 'Admin',

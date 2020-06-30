@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['register' => false]);
 
-Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function (){
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('/overwatch', 'OverwatchController@index')->name('overwatch');
 
     Route::any('/forms', 'FormsController@index')->name('forms');
