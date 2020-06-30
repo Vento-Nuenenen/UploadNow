@@ -40,7 +40,7 @@ class FrontendController extends Controller
                 return redirect()->back()->withInput()->with('error', 'File is missing!');
             }
 
-            $validator = Validator::make(request()->all(), [
+            $validator = Validator::make($request->all(), [
                 'g-recaptcha-response' => 'required|captcha',
             ]);
 
