@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "axios": "^0.20",
-        "bootstrap": "^4.5.2",
+        "bootstrap": "^4.5.3",
         "cross-env": "^7.0",
         "dropzone": "^5.7.2",
         "font-awesome": "^4.7.0",
