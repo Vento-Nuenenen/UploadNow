@@ -13,7 +13,7 @@
         "axios": "0.21.1",
         "bootstrap": "4.6.0",
         "cross-env": "7.0.3",
-        "dropzone": "5.7.6",
+        "dropzone": "5.8.0",
         "font-awesome": "4.7.0",
         "jquery": "3.5.1",
         "laravel-mix": "6.0.13",
