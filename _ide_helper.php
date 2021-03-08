@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.28.1.
+ * Generated for Laravel 8.31.0.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -4980,7 +4980,7 @@
          * Register an event listener with the dispatcher.
          *
          * @param \Closure|string|array $events
-         * @param \Closure|string|null $listener
+         * @param \Closure|string|array|null $listener
          * @return void 
          * @static 
          */ 
@@ -6259,6 +6259,7 @@
      * @method static \Illuminate\Http\Client\PendingRequest bodyFormat(string $format)
      * @method static \Illuminate\Http\Client\PendingRequest contentType(string $contentType)
      * @method static \Illuminate\Http\Client\PendingRequest retry(int $times, int $sleep = 0)
+     * @method static \Illuminate\Http\Client\PendingRequest sink($to)
      * @method static \Illuminate\Http\Client\PendingRequest stub(callable $callback)
      * @method static \Illuminate\Http\Client\PendingRequest timeout(int $seconds)
      * @method static \Illuminate\Http\Client\PendingRequest withBasicAuth(string $username, string $password)
@@ -7581,7 +7582,7 @@
      * 
      *
      * @method static mixed reset(array $credentials, \Closure $callback)
-     * @method static string sendResetLink(array $credentials)
+     * @method static string sendResetLink(array $credentials, \Closure $callback = null)
      * @method static \Illuminate\Contracts\Auth\CanResetPassword getUser(array $credentials)
      * @method static string createToken(\Illuminate\Contracts\Auth\CanResetPassword $user)
      * @method static void deleteToken(\Illuminate\Contracts\Auth\CanResetPassword $user)
@@ -8066,7 +8067,7 @@
                     /**
          * Register a callback to be executed when creating job payloads.
          *
-         * @param callable $callback
+         * @param callable|null $callback
          * @return void 
          * @static 
          */ 
@@ -9718,7 +9719,7 @@
                         return $instance->getAcceptableContentTypes();
         }
                     /**
-         * Returns true if the request is a XMLHttpRequest.
+         * Returns true if the request is an XMLHttpRequest.
          * 
          * It works if your JavaScript library sets an X-Requested-With HTTP header.
          * It is known to work with common JavaScript frameworks:
