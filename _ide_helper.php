@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.31.0.
+ * Generated for Laravel 8.35.1.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1255,6 +1255,7 @@
          * @param \Closure|string $concrete
          * @return mixed 
          * @throws \Illuminate\Contracts\Container\BindingResolutionException
+         * @throws \Illuminate\Contracts\Container\CircularDependencyException
          * @static 
          */ 
         public static function build($concrete)
@@ -1719,6 +1720,29 @@
                         return $instance->hasResolvedGuards();
         }
                     /**
+         * Forget all of the resolved guard instances.
+         *
+         * @return \Illuminate\Auth\AuthManager 
+         * @static 
+         */ 
+        public static function forgetGuards()
+        {
+                        /** @var \Illuminate\Auth\AuthManager $instance */
+                        return $instance->forgetGuards();
+        }
+                    /**
+         * Set the application instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application $app
+         * @return \Illuminate\Auth\AuthManager 
+         * @static 
+         */ 
+        public static function setApplication($app)
+        {
+                        /** @var \Illuminate\Auth\AuthManager $instance */
+                        return $instance->setApplication($app);
+        }
+                    /**
          * Create the user provider implementation for the driver.
          *
          * @param string|null $provider
@@ -1897,6 +1921,7 @@
          * @param string $password
          * @param string $attribute
          * @return bool|null 
+         * @throws \Illuminate\Auth\AuthenticationException
          * @static 
          */ 
         public static function logoutOtherDevices($password, $attribute = 'password')
@@ -2690,6 +2715,40 @@
         {
                         /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
                         return $instance->extend($driver, $callback);
+        }
+                    /**
+         * Get the application instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Foundation\Application 
+         * @static 
+         */ 
+        public static function getApplication()
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        return $instance->getApplication();
+        }
+                    /**
+         * Set the application instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application $app
+         * @return \Illuminate\Broadcasting\BroadcastManager 
+         * @static 
+         */ 
+        public static function setApplication($app)
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        return $instance->setApplication($app);
+        }
+                    /**
+         * Forget all of the resolved driver instances.
+         *
+         * @return \Illuminate\Broadcasting\BroadcastManager 
+         * @static 
+         */ 
+        public static function forgetDrivers()
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        return $instance->forgetDrivers();
         }
          
     }
@@ -3976,6 +4035,17 @@
                         return $instance->getQueuedCookies();
         }
                     /**
+         * Flush the cookies which have been queued for the next request.
+         *
+         * @return \Illuminate\Cookie\CookieJar 
+         * @static 
+         */ 
+        public static function flushQueuedCookies()
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        return $instance->flushQueuedCookies();
+        }
+                    /**
          * Register a custom macro.
          *
          * @param string $name
@@ -4010,6 +4080,102 @@
         public static function hasMacro($name)
         {
                         return \Illuminate\Cookie\CookieJar::hasMacro($name);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Encryption\Encrypter
+     */ 
+        class Crypt {
+                    /**
+         * Determine if the given key and cipher combination is valid.
+         *
+         * @param string $key
+         * @param string $cipher
+         * @return bool 
+         * @static 
+         */ 
+        public static function supported($key, $cipher)
+        {
+                        return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
+        }
+                    /**
+         * Create a new encryption key for the given cipher.
+         *
+         * @param string $cipher
+         * @return string 
+         * @static 
+         */ 
+        public static function generateKey($cipher)
+        {
+                        return \Illuminate\Encryption\Encrypter::generateKey($cipher);
+        }
+                    /**
+         * Encrypt the given value.
+         *
+         * @param mixed $value
+         * @param bool $serialize
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\EncryptException
+         * @static 
+         */ 
+        public static function encrypt($value, $serialize = true)
+        {
+                        /** @var \Illuminate\Encryption\Encrypter $instance */
+                        return $instance->encrypt($value, $serialize);
+        }
+                    /**
+         * Encrypt a string without serialization.
+         *
+         * @param string $value
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\EncryptException
+         * @static 
+         */ 
+        public static function encryptString($value)
+        {
+                        /** @var \Illuminate\Encryption\Encrypter $instance */
+                        return $instance->encryptString($value);
+        }
+                    /**
+         * Decrypt the given value.
+         *
+         * @param string $payload
+         * @param bool $unserialize
+         * @return mixed 
+         * @throws \Illuminate\Contracts\Encryption\DecryptException
+         * @static 
+         */ 
+        public static function decrypt($payload, $unserialize = true)
+        {
+                        /** @var \Illuminate\Encryption\Encrypter $instance */
+                        return $instance->decrypt($payload, $unserialize);
+        }
+                    /**
+         * Decrypt the given string without unserialization.
+         *
+         * @param string $payload
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\DecryptException
+         * @static 
+         */ 
+        public static function decryptString($payload)
+        {
+                        /** @var \Illuminate\Encryption\Encrypter $instance */
+                        return $instance->decryptString($payload);
+        }
+                    /**
+         * Get the encryption key.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getKey()
+        {
+                        /** @var \Illuminate\Encryption\Encrypter $instance */
+                        return $instance->getKey();
         }
          
     }
@@ -4472,6 +4638,17 @@
         {            //Method inherited from \Illuminate\Database\Connection         
                         /** @var \Illuminate\Database\MySqlConnection $instance */
                         $instance->recordsHaveBeenModified($value);
+        }
+                    /**
+         * Reset the record modification state.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function forgetRecordModificationState()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->forgetRecordModificationState();
         }
                     /**
          * Is Doctrine available?
@@ -5185,6 +5362,19 @@
         public static function hasMacro($name)
         {
                         return \Illuminate\Events\Dispatcher::hasMacro($name);
+        }
+                    /**
+         * Assert if an event has a listener attached to it.
+         *
+         * @param string $expectedEvent
+         * @param string $expectedListener
+         * @return void 
+         * @static 
+         */ 
+        public static function assertListening($expectedEvent, $expectedListener)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\EventFake $instance */
+                        $instance->assertListening($expectedEvent, $expectedListener);
         }
                     /**
          * Assert if an event was dispatched based on a truth-test callback.
@@ -6102,6 +6292,18 @@
                         /** @var \Illuminate\Auth\Access\Gate $instance */
                         return $instance->policies();
         }
+                    /**
+         * Set the container instance used by the gate.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return \Illuminate\Auth\Access\Gate 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->setContainer($container);
+        }
          
     }
             /**
@@ -6243,6 +6445,40 @@
                         /** @var \Illuminate\Hashing\HashManager $instance */
                         return $instance->getDrivers();
         }
+                    /**
+         * Get the container instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->getContainer();
+        }
+                    /**
+         * Set the container instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return \Illuminate\Hashing\HashManager 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->setContainer($container);
+        }
+                    /**
+         * Forget all of the resolved driver instances.
+         *
+         * @return \Illuminate\Hashing\HashManager 
+         * @static 
+         */ 
+        public static function forgetDrivers()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->forgetDrivers();
+        }
          
     }
             /**
@@ -6271,6 +6507,8 @@
      * @method static \Illuminate\Http\Client\PendingRequest withToken(string $token, string $type = 'Bearer')
      * @method static \Illuminate\Http\Client\PendingRequest withoutRedirecting()
      * @method static \Illuminate\Http\Client\PendingRequest withoutVerifying()
+     * @method static \Illuminate\Http\Client\PendingRequest dump()
+     * @method static \Illuminate\Http\Client\PendingRequest dd()
      * @method static \Illuminate\Http\Client\Response delete(string $url, array $data = [])
      * @method static \Illuminate\Http\Client\Response get(string $url, array $query = [])
      * @method static \Illuminate\Http\Client\Response head(string $url, array $query = [])
@@ -7022,7 +7260,7 @@
          * Get a mailer instance by name.
          *
          * @param string|null $name
-         * @return \Illuminate\Mail\Mailer 
+         * @return \Illuminate\Contracts\Mail\Mailer 
          * @static 
          */ 
         public static function mailer($name = null)
@@ -7101,6 +7339,40 @@
         {
                         /** @var \Illuminate\Mail\MailManager $instance */
                         return $instance->extend($driver, $callback);
+        }
+                    /**
+         * Get the application instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Foundation\Application 
+         * @static 
+         */ 
+        public static function getApplication()
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        return $instance->getApplication();
+        }
+                    /**
+         * Set the application instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application $app
+         * @return \Illuminate\Mail\MailManager 
+         * @static 
+         */ 
+        public static function setApplication($app)
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        return $instance->setApplication($app);
+        }
+                    /**
+         * Forget all of the resolved mailer instances.
+         *
+         * @return \Illuminate\Mail\MailManager 
+         * @static 
+         */ 
+        public static function forgetMailers()
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        return $instance->forgetMailers();
         }
                     /**
          * Assert if a mailable was sent based on a truth-test callback.
@@ -7444,6 +7716,40 @@
         {            //Method inherited from \Illuminate\Support\Manager         
                         /** @var \Illuminate\Notifications\ChannelManager $instance */
                         return $instance->getDrivers();
+        }
+                    /**
+         * Get the container instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->getContainer();
+        }
+                    /**
+         * Set the container instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return \Illuminate\Notifications\ChannelManager 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->setContainer($container);
+        }
+                    /**
+         * Forget all of the resolved driver instances.
+         *
+         * @return \Illuminate\Notifications\ChannelManager 
+         * @static 
+         */ 
+        public static function forgetDrivers()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->forgetDrivers();
         }
                     /**
          * Assert if a notification was sent based on a truth-test callback.
@@ -7794,6 +8100,29 @@
                         return $instance->getName($connection);
         }
                     /**
+         * Get the application instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Foundation\Application 
+         * @static 
+         */ 
+        public static function getApplication()
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        return $instance->getApplication();
+        }
+                    /**
+         * Set the application instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application $app
+         * @return \Illuminate\Queue\QueueManager 
+         * @static 
+         */ 
+        public static function setApplication($app)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        return $instance->setApplication($app);
+        }
+                    /**
          * Assert if a job was pushed based on a truth-test callback.
          *
          * @param string|\Closure $job
@@ -8074,6 +8403,17 @@
         public static function createPayloadUsing($callback)
         {            //Method inherited from \Illuminate\Queue\Queue         
                         \Illuminate\Queue\SyncQueue::createPayloadUsing($callback);
+        }
+                    /**
+         * Get the container instance being used by the connection.
+         *
+         * @return \Illuminate\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {            //Method inherited from \Illuminate\Queue\Queue         
+                        /** @var \Illuminate\Queue\SyncQueue $instance */
+                        return $instance->getContainer();
         }
                     /**
          * Set the IoC container instance.
@@ -11421,6 +11761,18 @@
                         return \Illuminate\Routing\Router::uniqueMiddleware($middleware);
         }
                     /**
+         * Set the container instance used by the router.
+         *
+         * @param \Illuminate\Container\Container $container
+         * @return \Illuminate\Routing\Router 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->setContainer($container);
+        }
+                    /**
          * Register a custom macro.
          *
          * @param string $name
@@ -11946,6 +12298,40 @@
                         return $instance->getDrivers();
         }
                     /**
+         * Get the container instance used by the manager.
+         *
+         * @return \Illuminate\Contracts\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->getContainer();
+        }
+                    /**
+         * Set the container instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return \Illuminate\Session\SessionManager 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->setContainer($container);
+        }
+                    /**
+         * Forget all of the resolved driver instances.
+         *
+         * @return \Illuminate\Session\SessionManager 
+         * @static 
+         */ 
+        public static function forgetDrivers()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->forgetDrivers();
+        }
+                    /**
          * Start the session, reading the data from a handler.
          *
          * @return bool 
@@ -12460,6 +12846,33 @@
             /**
      * 
      *
+     * @method static \Illuminate\Contracts\Filesystem\Filesystem assertExists(string|array $path)
+     * @method static \Illuminate\Contracts\Filesystem\Filesystem assertMissing(string|array $path)
+     * @method static array allDirectories(string|null $directory = null)
+     * @method static array allFiles(string|null $directory = null)
+     * @method static array directories(string|null $directory = null, bool $recursive = false)
+     * @method static array files(string|null $directory = null, bool $recursive = false)
+     * @method static bool append(string $path, string $data)
+     * @method static bool copy(string $from, string $to)
+     * @method static bool delete(string|array $paths)
+     * @method static bool deleteDirectory(string $directory)
+     * @method static bool exists(string $path)
+     * @method static bool makeDirectory(string $path)
+     * @method static bool move(string $from, string $to)
+     * @method static string path(string $path)
+     * @method static bool prepend(string $path, string $data)
+     * @method static bool put(string $path, string|resource $contents, mixed $options = [])
+     * @method static string|false putFile(string $path, \Illuminate\Http\File|\Illuminate\Http\UploadedFile|string $file, mixed $options = [])
+     * @method static string|false putFileAs(string $path, \Illuminate\Http\File|\Illuminate\Http\UploadedFile|string $file, string $name, mixed $options = [])
+     * @method static bool setVisibility(string $path, string $visibility)
+     * @method static bool writeStream(string $path, resource $resource, array $options = [])
+     * @method static int lastModified(string $path)
+     * @method static int size(string $path)
+     * @method static resource|null readStream(string $path)
+     * @method static string get(string $path)
+     * @method static string getVisibility(string $path)
+     * @method static string temporaryUrl(string $path, \DateTimeInterface $expiration, array $options = [])
+     * @method static string url(string $path)
      * @see \Illuminate\Filesystem\FilesystemManager
      */ 
         class Storage {
@@ -12467,7 +12880,7 @@
          * Get a filesystem instance.
          *
          * @param string|null $name
-         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @return \Illuminate\Contracts\Filesystem\Filesystem 
          * @static 
          */ 
         public static function drive($name = null)
@@ -12479,7 +12892,7 @@
          * Get a filesystem instance.
          *
          * @param string|null $name
-         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @return \Illuminate\Contracts\Filesystem\Filesystem 
          * @static 
          */ 
         public static function disk($name = null)
@@ -12490,7 +12903,7 @@
                     /**
          * Get a default cloud filesystem instance.
          *
-         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @return \Illuminate\Contracts\Filesystem\Filesystem 
          * @static 
          */ 
         public static function cloud()
@@ -12502,7 +12915,7 @@
          * Create an instance of the local driver.
          *
          * @param array $config
-         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @return \Illuminate\Contracts\Filesystem\Filesystem 
          * @static 
          */ 
         public static function createLocalDriver($config)
@@ -12514,7 +12927,7 @@
          * Create an instance of the ftp driver.
          *
          * @param array $config
-         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @return \Illuminate\Contracts\Filesystem\Filesystem 
          * @static 
          */ 
         public static function createFtpDriver($config)
@@ -12526,7 +12939,7 @@
          * Create an instance of the sftp driver.
          *
          * @param array $config
-         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @return \Illuminate\Contracts\Filesystem\Filesystem 
          * @static 
          */ 
         public static function createSftpDriver($config)
@@ -12617,449 +13030,6 @@
         {
                         /** @var \Illuminate\Filesystem\FilesystemManager $instance */
                         return $instance->extend($driver, $callback);
-        }
-                    /**
-         * Assert that the given file exists.
-         *
-         * @param string|array $path
-         * @param string|null $content
-         * @return \Illuminate\Filesystem\FilesystemAdapter 
-         * @static 
-         */ 
-        public static function assertExists($path, $content = null)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->assertExists($path, $content);
-        }
-                    /**
-         * Assert that the given file does not exist.
-         *
-         * @param string|array $path
-         * @return \Illuminate\Filesystem\FilesystemAdapter 
-         * @static 
-         */ 
-        public static function assertMissing($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->assertMissing($path);
-        }
-                    /**
-         * Determine if a file exists.
-         *
-         * @param string $path
-         * @return bool 
-         * @static 
-         */ 
-        public static function exists($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->exists($path);
-        }
-                    /**
-         * Determine if a file or directory is missing.
-         *
-         * @param string $path
-         * @return bool 
-         * @static 
-         */ 
-        public static function missing($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->missing($path);
-        }
-                    /**
-         * Get the full path for the file at the given "short" path.
-         *
-         * @param string $path
-         * @return string 
-         * @static 
-         */ 
-        public static function path($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->path($path);
-        }
-                    /**
-         * Get the contents of a file.
-         *
-         * @param string $path
-         * @return string 
-         * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-         * @static 
-         */ 
-        public static function get($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->get($path);
-        }
-                    /**
-         * Create a streamed response for a given file.
-         *
-         * @param string $path
-         * @param string|null $name
-         * @param array|null $headers
-         * @param string|null $disposition
-         * @return \Symfony\Component\HttpFoundation\StreamedResponse 
-         * @static 
-         */ 
-        public static function response($path, $name = null, $headers = [], $disposition = 'inline')
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->response($path, $name, $headers, $disposition);
-        }
-                    /**
-         * Create a streamed download response for a given file.
-         *
-         * @param string $path
-         * @param string|null $name
-         * @param array|null $headers
-         * @return \Symfony\Component\HttpFoundation\StreamedResponse 
-         * @static 
-         */ 
-        public static function download($path, $name = null, $headers = [])
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->download($path, $name, $headers);
-        }
-                    /**
-         * Write the contents of a file.
-         *
-         * @param string $path
-         * @param string|resource $contents
-         * @param mixed $options
-         * @return bool 
-         * @static 
-         */ 
-        public static function put($path, $contents, $options = [])
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->put($path, $contents, $options);
-        }
-                    /**
-         * Store the uploaded file on the disk.
-         *
-         * @param string $path
-         * @param \Illuminate\Http\File|\Illuminate\Http\UploadedFile|string $file
-         * @param mixed $options
-         * @return string|false 
-         * @static 
-         */ 
-        public static function putFile($path, $file, $options = [])
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->putFile($path, $file, $options);
-        }
-                    /**
-         * Store the uploaded file on the disk with a given name.
-         *
-         * @param string $path
-         * @param \Illuminate\Http\File|\Illuminate\Http\UploadedFile|string $file
-         * @param string $name
-         * @param mixed $options
-         * @return string|false 
-         * @static 
-         */ 
-        public static function putFileAs($path, $file, $name, $options = [])
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->putFileAs($path, $file, $name, $options);
-        }
-                    /**
-         * Get the visibility for the given path.
-         *
-         * @param string $path
-         * @return string 
-         * @static 
-         */ 
-        public static function getVisibility($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->getVisibility($path);
-        }
-                    /**
-         * Set the visibility for the given path.
-         *
-         * @param string $path
-         * @param string $visibility
-         * @return bool 
-         * @static 
-         */ 
-        public static function setVisibility($path, $visibility)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->setVisibility($path, $visibility);
-        }
-                    /**
-         * Prepend to a file.
-         *
-         * @param string $path
-         * @param string $data
-         * @param string $separator
-         * @return bool 
-         * @static 
-         */ 
-        public static function prepend($path, $data, $separator = '
-')
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->prepend($path, $data, $separator);
-        }
-                    /**
-         * Append to a file.
-         *
-         * @param string $path
-         * @param string $data
-         * @param string $separator
-         * @return bool 
-         * @static 
-         */ 
-        public static function append($path, $data, $separator = '
-')
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->append($path, $data, $separator);
-        }
-                    /**
-         * Delete the file at a given path.
-         *
-         * @param string|array $paths
-         * @return bool 
-         * @static 
-         */ 
-        public static function delete($paths)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->delete($paths);
-        }
-                    /**
-         * Copy a file to a new location.
-         *
-         * @param string $from
-         * @param string $to
-         * @return bool 
-         * @static 
-         */ 
-        public static function copy($from, $to)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->copy($from, $to);
-        }
-                    /**
-         * Move a file to a new location.
-         *
-         * @param string $from
-         * @param string $to
-         * @return bool 
-         * @static 
-         */ 
-        public static function move($from, $to)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->move($from, $to);
-        }
-                    /**
-         * Get the file size of a given file.
-         *
-         * @param string $path
-         * @return int 
-         * @static 
-         */ 
-        public static function size($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->size($path);
-        }
-                    /**
-         * Get the mime-type of a given file.
-         *
-         * @param string $path
-         * @return string|false 
-         * @static 
-         */ 
-        public static function mimeType($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->mimeType($path);
-        }
-                    /**
-         * Get the file's last modification time.
-         *
-         * @param string $path
-         * @return int 
-         * @static 
-         */ 
-        public static function lastModified($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->lastModified($path);
-        }
-                    /**
-         * Get the URL for the file at the given path.
-         *
-         * @param string $path
-         * @return string 
-         * @throws \RuntimeException
-         * @static 
-         */ 
-        public static function url($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->url($path);
-        }
-                    /**
-         * Get a resource to read the file.
-         *
-         * @param string $path
-         * @return resource|null The path resource or null on failure.
-         * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-         * @static 
-         */ 
-        public static function readStream($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->readStream($path);
-        }
-                    /**
-         * Write a new file using a stream.
-         *
-         * @param string $path
-         * @param resource $resource
-         * @param array $options
-         * @return bool 
-         * @throws \InvalidArgumentException If $resource is not a file handle.
-         * @throws \Illuminate\Contracts\Filesystem\FileExistsException
-         * @static 
-         */ 
-        public static function writeStream($path, $resource, $options = [])
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->writeStream($path, $resource, $options);
-        }
-                    /**
-         * Get a temporary URL for the file at the given path.
-         *
-         * @param string $path
-         * @param \DateTimeInterface $expiration
-         * @param array $options
-         * @return string 
-         * @throws \RuntimeException
-         * @static 
-         */ 
-        public static function temporaryUrl($path, $expiration, $options = [])
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->temporaryUrl($path, $expiration, $options);
-        }
-                    /**
-         * Get a temporary URL for the file at the given path.
-         *
-         * @param \League\Flysystem\AwsS3v3\AwsS3Adapter $adapter
-         * @param string $path
-         * @param \DateTimeInterface $expiration
-         * @param array $options
-         * @return string 
-         * @static 
-         */ 
-        public static function getAwsTemporaryUrl($adapter, $path, $expiration, $options)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->getAwsTemporaryUrl($adapter, $path, $expiration, $options);
-        }
-                    /**
-         * Get an array of all files in a directory.
-         *
-         * @param string|null $directory
-         * @param bool $recursive
-         * @return array 
-         * @static 
-         */ 
-        public static function files($directory = null, $recursive = false)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->files($directory, $recursive);
-        }
-                    /**
-         * Get all of the files from the given directory (recursive).
-         *
-         * @param string|null $directory
-         * @return array 
-         * @static 
-         */ 
-        public static function allFiles($directory = null)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->allFiles($directory);
-        }
-                    /**
-         * Get all of the directories within a given directory.
-         *
-         * @param string|null $directory
-         * @param bool $recursive
-         * @return array 
-         * @static 
-         */ 
-        public static function directories($directory = null, $recursive = false)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->directories($directory, $recursive);
-        }
-                    /**
-         * Get all (recursive) of the directories within a given directory.
-         *
-         * @param string|null $directory
-         * @return array 
-         * @static 
-         */ 
-        public static function allDirectories($directory = null)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->allDirectories($directory);
-        }
-                    /**
-         * Create a directory.
-         *
-         * @param string $path
-         * @return bool 
-         * @static 
-         */ 
-        public static function makeDirectory($path)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->makeDirectory($path);
-        }
-                    /**
-         * Recursively delete a directory.
-         *
-         * @param string $directory
-         * @return bool 
-         * @static 
-         */ 
-        public static function deleteDirectory($directory)
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->deleteDirectory($directory);
-        }
-                    /**
-         * Flush the Flysystem cache.
-         *
-         * @return void 
-         * @static 
-         */ 
-        public static function flushCache()
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        $instance->flushCache();
-        }
-                    /**
-         * Get the Flysystem driver.
-         *
-         * @return \League\Flysystem\FilesystemInterface 
-         * @static 
-         */ 
-        public static function getDriver()
-        {
-                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
-                        return $instance->getDriver();
         }
          
     }
@@ -13686,6 +13656,29 @@
         {
                         /** @var \Illuminate\Validation\Factory $instance */
                         $instance->setPresenceVerifier($presenceVerifier);
+        }
+                    /**
+         * Get the container instance used by the validation factory.
+         *
+         * @return \Illuminate\Contracts\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        return $instance->getContainer();
+        }
+                    /**
+         * Set the container instance used by the validation factory.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return \Illuminate\Validation\Factory 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        return $instance->setContainer($container);
         }
          
     }
@@ -14633,7 +14626,7 @@
                     /**
          * Adds a data collector
          *
-         * @param \Barryvdh\Debugbar\DataCollectorInterface $collector
+         * @param \DebugBar\DataCollector\DataCollectorInterface $collector
          * @throws DebugBarException
          * @return \Barryvdh\Debugbar\LaravelDebugbar 
          * @static 
@@ -14842,7 +14835,7 @@
          * Returns a data collector
          *
          * @param string $name
-         * @return \DebugBar\DataCollectorInterface 
+         * @return \DebugBar\DataCollector\DataCollectorInterface 
          * @throws DebugBarException
          * @static 
          */ 
@@ -15136,6 +15129,27 @@
         public static function register($apiKey, $apiSecret = null, $contextDetector = null, $container = null)
         {
                         return \Facade\FlareClient\Flare::register($apiKey, $apiSecret, $contextDetector, $container);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function determineVersionUsing($determineVersionCallable)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->determineVersionUsing($determineVersionCallable);
+        }
+                    /**
+         * 
+         *
+         * @return null|string 
+         * @static 
+         */ 
+        public static function version()
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->version();
         }
                     /**
          * 
@@ -16596,6 +16610,7 @@ namespace  {
             class Cache extends \Illuminate\Support\Facades\Cache {}
             class Config extends \Illuminate\Support\Facades\Config {}
             class Cookie extends \Illuminate\Support\Facades\Cookie {}
+            class Crypt extends \Illuminate\Support\Facades\Crypt {}
             class DB extends \Illuminate\Support\Facades\DB {}
             class Eloquent extends \Illuminate\Database\Eloquent\Model {             
                 /**
@@ -17727,6 +17742,34 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Eloquent\Builder $instance */
                                 return $instance->eachById($callback, $count, $column, $alias);
+            }
+             
+                /**
+             * Query lazily, by chunks of the given size.
+             *
+             * @param int $chunkSize
+             * @return \Illuminate\Support\LazyCollection 
+             * @static 
+             */ 
+            public static function lazy($chunkSize = 1000)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->lazy($chunkSize);
+            }
+             
+                /**
+             * Query lazily, by chunking the results of a query by comparing IDs.
+             *
+             * @param int $count
+             * @param string|null $column
+             * @param string|null $alias
+             * @return \Illuminate\Support\LazyCollection 
+             * @static 
+             */ 
+            public static function lazyById($chunkSize = 1000, $column = null, $alias = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->lazyById($chunkSize, $column, $alias);
             }
              
                 /**
