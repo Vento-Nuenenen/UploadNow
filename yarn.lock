@@ -5428,10 +5428,10 @@ postcss@7.0.21:
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@8.2.10, postcss@^8.2.6:
-  version "8.2.10"
-  resolved "https://registry.npmjs.org/postcss/-/postcss-8.2.10.tgz"
-  integrity sha512-b/h7CPV7QEdrqIxtAf2j31U5ef05uBDuvoXv6L51Q4rcS1jdlXAVKJv+atCFdUXYl9dyTHGyoMzIepwowRJjFw==
+postcss@8.2.12, postcss@^8.2.6:
+  version "8.2.12"
+  resolved "https://registry.npmjs.org/postcss/-/postcss-8.2.12.tgz"
+  integrity sha512-BJnGT5+0q2tzvs6oQfnY2NpEJ7rIXNfBnZtQOKCIsweeWXBXeDd5k31UgTdS3d/c02ouspufn37mTaHWkJyzMQ==
   dependencies:
     colorette "^1.2.2"
     nanoid "^3.1.22"
