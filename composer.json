@@ -21,7 +21,7 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "3.6.1",
         "barryvdh/laravel-ide-helper": "2.10.0",
-        "facade/ignition": "2.10.1",
+        "facade/ignition": "2.10.2",
         "fzaninotto/faker": "1.9.2",
         "mockery/mockery": "1.4.3",
         "nunomaduro/collision": "5.4.0",
