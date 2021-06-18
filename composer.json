@@ -19,7 +19,7 @@
         "laravelcollective/html": "6.2.1"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "3.6.1",
+        "barryvdh/laravel-debugbar": "3.6.2",
         "barryvdh/laravel-ide-helper": "2.10.0",
         "facade/ignition": "2.10.2",
         "fzaninotto/faker": "1.9.2",
