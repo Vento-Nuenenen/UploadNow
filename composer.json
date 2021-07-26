@@ -24,7 +24,7 @@
         "facade/ignition": "2.11.2",
         "fzaninotto/faker": "1.9.2",
         "mockery/mockery": "1.4.3",
-        "nunomaduro/collision": "5.5.0",
+        "nunomaduro/collision": "5.6.0",
         "phpunit/phpunit": "9.5.7"
     },
     "config": {
