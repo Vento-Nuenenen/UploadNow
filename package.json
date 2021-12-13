@@ -22,6 +22,6 @@
         "postcss": "8.4.5",
         "resolve-url-loader": "4.0.0",
         "sass": "1.45.0",
-        "sass-loader": "12.3.0"
+        "sass-loader": "12.4.0"
     }
 }
