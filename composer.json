@@ -15,7 +15,7 @@
         "kouz/laravel-airbrake": "0.7.0",
         "laravel/framework": "8.81.0",
         "laravel/tinker": "2.7.0",
-        "laravel/ui": "3.4.1",
+        "laravel/ui": "3.4.2",
         "laravelcollective/html": "6.2.1"
     },
     "require-dev": {
