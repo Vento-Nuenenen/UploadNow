@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ed92a5cfadc1518e4d6f6554668bdfb",
+    "content-hash": "30a3b17c9661430ad194fb9c43efa3ff",
     "packages": [
         {
             "name": "airbrake/phpbrake",
@@ -65,22 +65,22 @@
         },
         {
             "name": "albertcht/invisible-recaptcha",
-            "version": "v1.9.6",
+            "version": "v1.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/albertcht/invisible-recaptcha.git",
-                "reference": "d69593858de5ede82cccf72ff17ff651fdba6eff"
+                "reference": "12a4aec36c32e4c4b97884ff6cae97859eb69098"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/albertcht/invisible-recaptcha/zipball/d69593858de5ede82cccf72ff17ff651fdba6eff",
-                "reference": "d69593858de5ede82cccf72ff17ff651fdba6eff",
+                "url": "https://api.github.com/repos/albertcht/invisible-recaptcha/zipball/12a4aec36c32e4c4b97884ff6cae97859eb69098",
+                "reference": "12a4aec36c32e4c4b97884ff6cae97859eb69098",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.2|^7.0",
-                "illuminate/support": "^5.0|^6.0|^7.0|^8.0",
-                "illuminate/view": "^5.0|^6.0|^7.0|^8.0",
+                "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0",
+                "illuminate/view": "^5.0|^6.0|^7.0|^8.0|^9.0",
                 "php": "^5.6.4 || ^7.0 || ^8.0"
             },
             "require-dev": {
@@ -122,9 +122,9 @@
             ],
             "support": {
                 "issues": "https://github.com/albertcht/invisible-recaptcha/issues",
-                "source": "https://github.com/albertcht/invisible-recaptcha/tree/v1.9.6"
+                "source": "https://github.com/albertcht/invisible-recaptcha/tree/v1.9.7"
             },
-            "time": "2021-04-10T14:05:31+00:00"
+            "time": "2022-02-10T02:36:34+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -828,12 +828,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
