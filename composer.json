@@ -10,7 +10,7 @@
         "php": "^7.3 || ^8.0",
         "albertcht/invisible-recaptcha": "1.9.7",
         "fideloper/proxy": "4.4.1",
-        "fruitcake/laravel-cors": "2.0.5",
+        "fruitcake/laravel-cors": "2.1.0",
         "guzzlehttp/guzzle": "7.4.1",
         "kouz/laravel-airbrake": "0.7.0",
         "laravel/framework": "8.83.1",
