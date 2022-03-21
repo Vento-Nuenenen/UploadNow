@@ -11,7 +11,7 @@
         "albertcht/invisible-recaptcha": "1.9.7",
         "fideloper/proxy": "4.4.1",
         "fruitcake/laravel-cors": "2.2.0",
-        "guzzlehttp/guzzle": "7.4.1",
+        "guzzlehttp/guzzle": "7.4.2",
         "kouz/laravel-airbrake": "0.7.0",
         "laravel/framework": "8.83.4",
         "laravel/tinker": "2.7.0",
