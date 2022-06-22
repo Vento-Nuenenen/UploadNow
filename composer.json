@@ -13,7 +13,7 @@
         "fruitcake/laravel-cors": "2.2.0",
         "guzzlehttp/guzzle": "7.4.5",
         "kouz/laravel-airbrake": "0.8.0",
-        "laravel/framework": "8.83.16",
+        "laravel/framework": "8.83.17",
         "laravel/tinker": "2.7.2",
         "laravel/ui": "3.4.6",
         "laravelcollective/html": "6.3.0"
