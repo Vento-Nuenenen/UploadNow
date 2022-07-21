@@ -9,7 +9,7 @@
     "require": {
         "php": "^7.3 || ^8.0",
         "albertcht/invisible-recaptcha": "1.9.7",
-        "fideloper/proxy": "4.4.1",
+        "fideloper/proxy": "4.4.2",
         "fruitcake/laravel-cors": "2.2.0",
         "guzzlehttp/guzzle": "7.4.5",
         "kouz/laravel-airbrake": "0.8.0",
