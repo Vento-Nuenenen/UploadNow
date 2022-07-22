@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b6e2c34ac7a9d31551c09c40249e4458",
+    "content-hash": "f59a0f50d3b1434cf585fd881e0a4cb0",
     "packages": [
         {
             "name": "airbrake/phpbrake",
@@ -1161,16 +1161,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.83.20",
+            "version": "v8.83.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "aa5908e83fccb18b135ca31aa0342cf4bd6909a8"
+                "reference": "1b3b06e5f419eef9bc3dfa06376dd60f5de524bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/aa5908e83fccb18b135ca31aa0342cf4bd6909a8",
-                "reference": "aa5908e83fccb18b135ca31aa0342cf4bd6909a8",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/1b3b06e5f419eef9bc3dfa06376dd60f5de524bc",
+                "reference": "1b3b06e5f419eef9bc3dfa06376dd60f5de524bc",
                 "shasum": ""
             },
             "require": {
@@ -1330,7 +1330,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-07-19T14:11:02+00:00"
+            "time": "2022-07-21T19:36:48+00:00"
         },
         {
             "name": "laravel/serializable-closure",
