@@ -23,7 +23,7 @@
         "barryvdh/laravel-ide-helper": "2.12.3",
         "facade/ignition": "2.17.6",
         "fzaninotto/faker": "1.9.2",
-        "mockery/mockery": "1.5.0",
+        "mockery/mockery": "1.5.1",
         "nunomaduro/collision": "5.11.0",
         "phpunit/phpunit": "9.5.24"
     },
