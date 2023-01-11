@@ -14,7 +14,7 @@
         "guzzlehttp/guzzle": "7.5.0",
         "kouz/laravel-airbrake": "0.8.0",
         "laravel/framework": "8.83.27",
-        "laravel/tinker": "2.7.3",
+        "laravel/tinker": "2.8.0",
         "laravel/ui": "3.4.6",
         "laravelcollective/html": "6.3.0"
     },
